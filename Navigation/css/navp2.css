@@ -1,0 +1,90 @@
+nav{
+    display: block;
+    text-align: center;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav a{
+    display: block;
+    background-color: #0b5482;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: 0 -1px 0 #000;
+    text-transform: uppercase;
+    padding: .8em 1.8em;
+    font-size: 90%;
+    position: relative;
+}
+.nav{
+/*    vertical-align: top;*/
+    display: inline-block;
+    box-shadow: 1px -1px -1px 1px red, -1px 1px -1px #fff, 0 0 6px 3px #fff;
+    border-radius: 6px;
+}
+.nav li{
+    position: relative;
+}
+.nav > li{
+    float: left;
+    border-bottom: 4px solid #fed500;
+    margin-right: 1px;
+}
+.nav > li > a{
+    margin-bottom: 1px;
+}
+.nav > li:hover
+/*,.nav > li:hover > a*/
+{
+    border-bottom-color: skyblue;
+}
+/*when hover is given to a parent element it is applicable to its child too, but when hover is given to a child, property is applicable to child only*/
+.nav  li:hover > a {
+color: greenyellow;
+} 
+.nav > li:first-child{
+    border-radius: 0px 0px 0px 4px;
+}
+.nav > li:first-child > a{
+    border-radius: 4px 0 0 0;
+}
+.nav > li:last-child{
+    border-radius: 0 0 4px 0;
+    margin-right: 0;
+}
+.nav > li:last-child > a{
+    border-radius: 0 4px 0 0;
+}
+.nav li a:first-child:nth-last-child(2):before{
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    top: 50%;
+    right: 5px;
+}    
+/*submenu position*/
+.nav ul{
+    position: absolute;
+    white-space: nowrap;
+    border-bottom: 5px solid red;
+    z-index: 1;
+    left: -999999em;
+}
+
+.nav > li:hover > ul {
+    left: auto;
+    padding-top: 5px;
+    min-width: 100%;
+}
+
+.nav > li li > ul{
+  border-left: 1px solid #fff;  
+}
+.nav > li li:hover > ul {
+    left: 100%;
+    top: -1px;
+}
